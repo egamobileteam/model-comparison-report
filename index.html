@@ -33,6 +33,9 @@
   }
   @media screen and (max-width: 560px) {
     div[style*="max-width:1180px"] { padding: 0 16px !important; }
+    /* trim oversized card padding so content isn't pushed off-screen */
+    div[style*="padding:34px 38px"] { padding: 22px 18px !important; } /* notice box */
+    div[style*="padding:34px;"]     { padding: 22px 18px !important; } /* recommendation body */
     section[style*="padding:64px"] { padding-top: 36px !important; padding-bottom: 32px !important; }
     h1 { font-size: 32px !important; }
     h2 { font-size: 22px !important; }
@@ -98,9 +101,72 @@
         </div>
         <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:31.5px; margin:0 0 22px;">Known limitations of this comparison</h2>
         <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:26px;">
-          <div>
-            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(a) Claude Code licensing on Team plans</div>
-            <p style="margin:0; font-size:16.3px; line-height:1.6; color:#4a4534;">Claude Code is <strong>not included</strong> on Team Standard seats ($20–25/seat/month). Access requires a Team Premium seat ($100–125/seat/month) or an Enterprise Premium seat. Organisations can mix seat types, but budgeting must account for this uplift for every developer needing terminal-based coding access. <span style="font-size:14.6px; color:#7a7260;">Source: <a href="https://claude.com/pricing" style="color:#9c7a2e;">Anthropic pricing</a>, verified July 2026.</span></p>
+          <div style="grid-column:1 / -1;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:12px;">(a) Claude Code licensing on Team plans</div>
+            <p style="margin:0 0 20px; font-size:16.3px; line-height:1.6; color:#4a4534;">Claude Code is <strong>not included</strong> on Team Standard seats — it requires a Team <strong>Premium</strong> seat (or an Enterprise Premium seat). Organisations can mix seat types, but budgeting must account for this uplift for every developer who needs terminal-based coding access.</p>
+
+            <!-- seat pricing comparison -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+
+              <!-- Standard seat -->
+              <div style="background:#fff; border:1px solid #e6dcbf; border-radius:6px; padding:22px 24px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:16px;">
+                  <span style="font-weight:600; font-size:17px; color:#3a3524;">Standard seat</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9c7a2e; background:#f6ecd4; border:1px solid #e6dcbf; padding:3px 9px; border-radius:20px; white-space:nowrap;">No Claude Code</span>
+                </div>
+                <div style="display:flex; align-items:baseline; gap:7px;">
+                  <span style="font-family:'IBM Plex Serif',serif; font-size:36px; line-height:1; color:#17211f;">$20</span>
+                  <span style="font-size:15px; color:#7a7260;">/ seat / mo</span>
+                </div>
+                <div style="margin-top:6px; font-size:13.5px; color:#8a8266;">$25 / seat / mo when billed monthly</div>
+                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">All Claude features, plus more usage than Pro.</p>
+              </div>
+
+              <!-- Premium seat (recommended for developers) -->
+              <div style="background:#fff; border:1px solid #cfe0dc; border-top:3px solid #0e6e63; border-radius:6px; padding:22px 24px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:16px;">
+                  <span style="font-weight:600; font-size:17px; color:#17211f;">Premium seat</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#0a534b; background:#e6f1ee; border:1px solid #cfe0dc; padding:3px 9px; border-radius:20px; white-space:nowrap;">Includes Claude Code</span>
+                </div>
+                <div style="display:flex; align-items:baseline; gap:7px;">
+                  <span style="font-family:'IBM Plex Serif',serif; font-size:36px; line-height:1; color:#0e6e63;">$100</span>
+                  <span style="font-size:15px; color:#7a7260;">/ seat / mo</span>
+                </div>
+                <div style="margin-top:6px; font-size:13.5px; color:#8a8266;">$125 / seat / mo when billed monthly</div>
+                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">5× more usage than Standard seats.</p>
+              </div>
+            </div>
+
+            <!-- what's included / not included -->
+            <div style="margin-top:16px; background:#fff; border:1px solid #e6dcbf; border-radius:6px; overflow:hidden;">
+              <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; background:#f6ecd4;">
+                <div style="padding:11px 16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9c7a2e;">What's included</div>
+                <div style="padding:11px 12px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9c7a2e;">Standard</div>
+                <div style="padding:11px 12px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#0a534b;">Premium</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
+                <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">Claude Code <span style="color:#8a8266;">(terminal coding)</span></div>
+                <div style="padding:12px 12px; text-align:center; font-size:15px; color:#b06a3a;">✕</div>
+                <div style="padding:12px 12px; text-align:center; font-size:15px; font-weight:600; color:#0e6e63;">✓</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
+                <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">All Claude apps &amp; features</div>
+                <div style="padding:12px 12px; text-align:center; font-size:15px; font-weight:600; color:#0e6e63;">✓</div>
+                <div style="padding:12px 12px; text-align:center; font-size:15px; font-weight:600; color:#0e6e63;">✓</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
+                <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">Usage allowance</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#55605d;">More than Pro</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#0a534b;">5× Standard</div>
+              </div>
+              <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
+                <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">Best suited for</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#55605d;">Chat · design · review</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#0a534b;">Developers on Claude Code</div>
+              </div>
+            </div>
+
+            <div style="margin-top:12px; font-size:14.6px; color:#7a7260;">Usage draws from your plan's shared pool. Source: <a href="https://claude.com/pricing" style="color:#9c7a2e;">Anthropic pricing</a>, verified July 2026.</div>
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(b) Model vs harness</div>

@@ -102,8 +102,8 @@
         <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:31.5px; margin:0 0 22px;">Known limitations of this comparison</h2>
         <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:26px;">
           <div style="grid-column:1 / -1;">
-            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:12px;">(a) Claude Code licensing on Team plans</div>
-            <p style="margin:0 0 20px; font-size:16.3px; line-height:1.6; color:#4a4534;">Claude Code is <strong>not included</strong> on Team Standard seats — it requires a Team <strong>Premium</strong> seat (or an Enterprise Premium seat). Organisations can mix seat types, but budgeting must account for this uplift for every developer who needs terminal-based coding access.</p>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:12px;">(a) Claude Code usage across Team seats</div>
+            <p style="margin:0 0 20px; font-size:16.3px; line-height:1.6; color:#4a4534;">Claude Code is <strong>included on both</strong> Team Standard and Team Premium seats — no add-on required. The difference between the two seat types is <strong>usage capacity</strong>, not feature access: Premium seats provide roughly <strong>5× the usage</strong> of Standard seats. Organisations can mix seat types, assigning Premium to developers whose Claude Code workloads need the higher allowance.</p>
 
             <!-- seat pricing comparison -->
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
@@ -112,14 +112,14 @@
               <div style="background:#fff; border:1px solid #e6dcbf; border-radius:6px; padding:22px 24px;">
                 <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:16px;">
                   <span style="font-weight:600; font-size:17px; color:#3a3524;">Standard seat</span>
-                  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#9c7a2e; background:#f6ecd4; border:1px solid #e6dcbf; padding:3px 9px; border-radius:20px; white-space:nowrap;">No Claude Code</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:#0a534b; background:#e6f1ee; border:1px solid #cfe0dc; padding:3px 9px; border-radius:20px; white-space:nowrap;">Includes Claude Code</span>
                 </div>
                 <div style="display:flex; align-items:baseline; gap:7px;">
                   <span style="font-family:'IBM Plex Serif',serif; font-size:36px; line-height:1; color:#17211f;">$20</span>
                   <span style="font-size:15px; color:#7a7260;">/ seat / mo</span>
                 </div>
                 <div style="margin-top:6px; font-size:13.5px; color:#8a8266;">$25 / seat / mo when billed monthly</div>
-                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">All Claude features, plus more usage than Pro.</p>
+                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">Claude Code included · all Claude features, plus more usage than Pro.</p>
               </div>
 
               <!-- Premium seat (recommended for developers) -->
@@ -133,7 +133,7 @@
                   <span style="font-size:15px; color:#7a7260;">/ seat / mo</span>
                 </div>
                 <div style="margin-top:6px; font-size:13.5px; color:#8a8266;">$125 / seat / mo when billed monthly</div>
-                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">5× more usage than Standard seats.</p>
+                <p style="margin:16px 0 0; font-size:15px; line-height:1.55; color:#4a4534;">Claude Code included · 5× more usage than Standard seats.</p>
               </div>
             </div>
 
@@ -146,7 +146,7 @@
               </div>
               <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
                 <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">Claude Code <span style="color:#8a8266;">(terminal coding)</span></div>
-                <div style="padding:12px 12px; text-align:center; font-size:15px; color:#b06a3a;">✕</div>
+                <div style="padding:12px 12px; text-align:center; font-size:15px; font-weight:600; color:#0e6e63;">✓</div>
                 <div style="padding:12px 12px; text-align:center; font-size:15px; font-weight:600; color:#0e6e63;">✓</div>
               </div>
               <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
@@ -161,8 +161,8 @@
               </div>
               <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr; border-top:1px solid #f0e6cf;">
                 <div style="padding:12px 16px; font-size:14.5px; color:#4a4534;">Best suited for</div>
-                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#55605d;">Chat · design · review</div>
-                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#0a534b;">Developers on Claude Code</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#55605d;">Lighter Claude Code &amp; chat use</div>
+                <div style="padding:12px 12px; text-align:center; font-size:13.5px; color:#0a534b;">Heavy Claude Code workloads</div>
               </div>
             </div>
 
@@ -553,7 +553,7 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">10</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Compliance API, managed org policies, 1M-token context; Claude Code on Premium/Enterprise seats only.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Compliance API, managed org policies, 1M-token context; Claude Code included on all Team &amp; Enterprise seats.</div>
               </td>
             </tr>
 
@@ -650,7 +650,7 @@
                 <li style="margin-bottom:6px;">Superior requirements traceability and enterprise readiness (10/10) with Compliance API and managed org settings</li>
                 <li style="margin-bottom:6px;">Complete RTL homepage with Arabic locale toggle, Noto Sans Arabic typography, and snapshot tests</li>
                 <li style="margin-bottom:6px;">TypeScript strict mode output with zero dead code; fewest rework cycles of all platforms tested</li>
-                <li>Mix-and-match Standard/Premium seat model allows cost control — assign Premium only to developers requiring Claude Code</li>
+                <li>Claude Code included on every Team seat; mix Standard/Premium purely by usage need, assigning Premium (5× usage) to heavy Claude Code developers</li>
               </ul>
             </div>
           </div>
@@ -658,7 +658,7 @@
             <div style="font-family:'IBM Plex Mono',monospace; font-size:12.4px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Risks &amp; Mitigations</div>
             <div style="font-size:16.9px; line-height:1.6; color:#3a4340;">
               <ul style="margin:0; padding-left:18px;">
-                <li style="margin-bottom:6px;"><strong>Premium seat licensing</strong> — Claude Code requires Team Premium seats ($100–125/seat/month), not Standard seats; budget accordingly for all developer seats</li>
+                <li style="margin-bottom:6px;"><strong>Usage capacity, not licensing</strong> — Claude Code is included on both Standard ($20–25/seat/mo) and Premium ($100–125/seat/mo) seats; budget Premium only where developers need the 5× usage allowance</li>
                 <li style="margin-bottom:6px;"><strong>Slower initial delivery</strong> (3h 28m vs Replit's 1h 52m) — Mitigate with parallel agent workflows and pre-configured CLAUDE.md project templates</li>
                 <li style="margin-bottom:6px;"><strong>Terminal-first interface</strong> limits non-developer access — Mitigate by pairing with Claude conversational interface for Product and Design teams</li>
                 <li style="margin-bottom:6px;"><strong>Model dependency</strong> — Scores reflect current Opus/Sonnet capabilities; establish quarterly re-evaluation cadence</li>

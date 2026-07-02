@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Development Platform Evaluation — UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div style="background:#f5f6f3; color:#17211f; font-family:'IBM Plex Sans',system-ui,sans-serif; font-size:16px; line-height:1.55; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;">
+
+    <!-- top institutional bar -->
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:18px 0; border-bottom:1px solid #e0e4df; font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#55605d;">
+      <span>Government Digital Delivery — UAE</span>
+      <span style="color:#0e6e63;">Internal · Confidential Draft</span>
+    </div>
+
+    <!-- METHODOLOGY CAVEATS (management visibility) -->
+    <section style="padding:36px 0 0;">
+      <div style="background:#fbf8ef; border:1px solid #e6dcbf; border-left:4px solid #9c7a2e; border-radius:3px; padding:34px 38px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#9c7a2e;">Methodology — Transparency Note</span>
+        </div>
+        <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:28px; margin:0 0 22px;">Known limitations of this comparison</h2>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:26px;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9c7a2e; margin-bottom:10px;">(a) Claude Code licensing on Team plans</div>
+            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a4534;">Claude Code is <strong>not included</strong> on Team Standard seats ($20–25/seat/month). Access requires a Team Premium seat ($100–125/seat/month) or an Enterprise Premium seat. Organisations can mix seat types, but budgeting must account for this uplift for every developer needing terminal-based coding access. <span style="font-size:13px; color:#7a7260;">Source: <a href="https://claude.com/pricing" style="color:#9c7a2e;">Anthropic pricing</a>, verified July 2026.</span></p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9c7a2e; margin-bottom:10px;">(b) Model vs harness</div>
+            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a4534;">Scores partly reflect the underlying model, not solely the platform harness around it. Model updates may shift results independent of the product.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9c7a2e; margin-bottom:10px;">(c) PoC vs production scale</div>
+            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a4534;">PoC task complexity may not surface differences that emerge at production scale, across larger codebases and longer engagements.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9c7a2e; margin-bottom:10px;">(d) Category mismatch</div>
+            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a4534;">These tools are not the same product class — an IDE assistant, a cloud IDE, an autonomous agent, and a platform. Certain criteria structurally advantage certain tools.</p>
+          </div>
+          <div style="grid-column:1 / -1;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#9c7a2e; margin-bottom:10px;">(e) Shared usage limits</div>
+            <p style="margin:0; font-size:14.5px; line-height:1.6; color:#4a4534;">Activity inside Claude Design draws from your plan's shared pool of usage limits. Every prompt, design iteration, and preview counts toward the same session allowances you use for regular chats, Claude Code, and Cowork — there is no separate Claude Design quota. Heavy design work can exhaust capacity for coding and chat within the same billing period. <span style="font-size:13px; color:#7a7260;">Source: <a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" style="color:#9c7a2e;">Anthropic Help Center</a>, verified July 2026.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section style="padding:64px 0 56px;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:20px;">Platform Evaluation Report</div>
+      <h1 style="font-family:'IBM Plex Serif',Georgia,serif; font-weight:500; font-size:52px; line-height:1.08; letter-spacing:-0.01em; margin:0 0 22px; max-width:16ch;">AI Development Platform Evaluation</h1>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:26px;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; padding:5px 12px; background:#fff; border:1px solid #e0e4df; border-radius:2px;">Cursor</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; padding:5px 12px; background:#fff; border:1px solid #e0e4df; border-radius:2px;">Replit</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; padding:5px 12px; background:#fff; border:1px solid #e0e4df; border-radius:2px;">OpenAI Codex</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; padding:5px 12px; background:#fff; border:1px solid #e0e4df; border-radius:2px;">Claude Platform</span>
+      </div>
+      <p style="font-size:19px; line-height:1.5; color:#55605d; max-width:60ch; margin:0 0 40px;">Structured PoC evaluation for platform adoption across Product, Design &amp; Development.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#e0e4df; border:1px solid #e0e4df; border-radius:3px; overflow:hidden;">
+        <div style="background:#fff; padding:22px 26px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:8px;">Evaluation Date</div>
+          <div style="font-family:'IBM Plex Serif',serif; font-size:22px;">02 July 2026</div>
+        </div>
+        <div style="background:#fff; padding:22px 26px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:8px;">Recommended Platform</div>
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-family:'IBM Plex Serif',serif; font-size:22px; color:#0e6e63;">Claude Platform</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POC SCOPE -->
+    <section style="padding:36px 0 56px; border-top:1px solid #e0e4df;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:14px;">01 — PoC Scope</div>
+      <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:32px; margin:0 0 12px;">The shared challenge</h2>
+      <p style="margin:0 0 32px; color:#55605d; font-size:16px; max-width:62ch;">All four platforms are issued an identical proof-of-concept brief. No platform receives additional guidance, examples, or setup assistance.</p>
+
+      <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:24px; align-items:start;">
+        <div style="background:#fff; border:1px solid #e0e4df; border-radius:3px; overflow:hidden;">
+          <div style="padding:14px 22px; border-bottom:1px solid #e0e4df; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f;">Deliverables Checklist</div>
+          <div style="padding:8px 22px 14px;">
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
+              <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:13px;">✓</span>
+              <div><div style="font-weight:600; font-size:16px;">Responsive government homepage</div><div style="font-size:13.5px; color:#8a938f;">Desktop, tablet and mobile breakpoints</div></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
+              <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:13px;">✓</span>
+              <div><div style="font-weight:600; font-size:16px;">Design system compliance</div><div style="font-size:13.5px; color:#8a938f;">Adherence to supplied tokens and components</div></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
+              <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:13px;">✓</span>
+              <div><div style="font-weight:600; font-size:16px;">Arabic RTL support</div><div style="font-size:13.5px; color:#8a938f;">Bidirectional layout and typography</div></div>
+            </div>
+            <div style="display:flex; align-items:center; gap:14px; padding:14px 0;">
+              <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:13px;">✓</span>
+              <div><div style="font-weight:600; font-size:16px;">Reusable component tests</div><div style="font-size:13.5px; color:#8a938f;">Unit coverage for shared UI primitives</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#eaf2f0; border:1px solid #cfe0dc; border-radius:3px; padding:26px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#0a534b; margin-bottom:18px;">Identical Inputs</div>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;">
+            <div style="background:#fff; border:1px solid #cfe0dc; border-radius:2px; padding:11px 14px; font-family:'IBM Plex Mono',monospace; font-size:13px; display:flex; justify-content:space-between;"><span>Cursor</span><span style="color:#0e6e63;">same brief</span></div>
+            <div style="background:#fff; border:1px solid #cfe0dc; border-radius:2px; padding:11px 14px; font-family:'IBM Plex Mono',monospace; font-size:13px; display:flex; justify-content:space-between;"><span>Replit</span><span style="color:#0e6e63;">same brief</span></div>
+            <div style="background:#fff; border:1px solid #cfe0dc; border-radius:2px; padding:11px 14px; font-family:'IBM Plex Mono',monospace; font-size:13px; display:flex; justify-content:space-between;"><span>OpenAI Codex</span><span style="color:#0e6e63;">same brief</span></div>
+            <div style="background:#fff; border:1px solid #cfe0dc; border-radius:2px; padding:11px 14px; font-family:'IBM Plex Mono',monospace; font-size:13px; display:flex; justify-content:space-between;"><span>Claude Platform</span><span style="color:#0e6e63;">same brief</span></div>
+          </div>
+          <p style="margin:0; font-size:14px; line-height:1.55; color:#0a534b;">One brief · one asset set · one constraint sheet — distributed simultaneously to all evaluated platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEIGHTED SCORING MODEL -->
+    <section style="padding:36px 0 56px; border-top:1px solid #e0e4df;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:14px;">02 — Weighted Scoring Model</div>
+      <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:32px; margin:0 0 12px;">Eight categories, weighted by impact</h2>
+      <p style="margin:0 0 30px; color:#55605d; font-size:16px; max-width:62ch;">Front-End Development carries the heaviest weighting at 25%, reflecting the primary intent of the evaluation.</p>
+
+      <div style="display:flex; height:120px; border-radius:3px; overflow:hidden; border:1px solid #e0e4df;">
+        <div style="flex-grow:15; min-width:0; background:#2563eb; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 10px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:12px; font-weight:600; line-height:1.25;">Discovery &amp; Requirements</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-top:8px;">15%</span>
+        </div>
+        <div style="flex-grow:15; min-width:0; background:#7c3aed; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 10px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:12px; font-weight:600; line-height:1.25;">UX / UI Design</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-top:8px;">15%</span>
+        </div>
+        <div style="flex-grow:25; min-width:0; background:#0e6e63; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 12px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:13px; font-weight:600; line-height:1.25;">Front-End Development</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:17px; font-weight:500; margin-top:8px;">25%</span>
+        </div>
+        <div style="flex-grow:15; min-width:0; background:#059669; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 10px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:12px; font-weight:600; line-height:1.25;">Code Quality</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-top:8px;">15%</span>
+        </div>
+        <div style="flex-grow:10; min-width:0; background:#d97706; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 8px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:11px; font-weight:600; line-height:1.25;">Delivery Speed</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:500; margin-top:8px;">10%</span>
+        </div>
+        <div style="flex-grow:10; min-width:0; background:#dc2626; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 8px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:11px; font-weight:600; line-height:1.25;">Testing &amp; QA</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:500; margin-top:8px;">10%</span>
+        </div>
+        <div style="flex-grow:5; min-width:0; background:#db2777; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 4px; text-align:center; border-right:1px solid rgba(255,255,255,0.25);">
+          <span style="font-size:10px; font-weight:600; line-height:1.2;">Collaboration</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:500; margin-top:8px;">5%</span>
+        </div>
+        <div style="flex-grow:5; min-width:0; background:#4338ca; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; padding:14px 4px; text-align:center;">
+          <span style="font-size:10px; font-weight:600; line-height:1.2;">Enterprise Readiness</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:500; margin-top:8px;">5%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCORECARD -->
+    <section style="padding:36px 0 56px; border-top:1px solid #e0e4df;">
+      <div style="margin-bottom:14px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:14px;">03 — Scorecard</div>
+        <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:32px; margin:0;">Weighted scoring results</h2>
+      </div>
+      <p style="margin:0 0 30px; color:#55605d; font-size:16px; max-width:62ch;">Scores assessed on a 0–10 scale per category. Weighted totals and ranking reflect cross-functional review findings from the July 2026 PoC cycle.</p>
+
+      <!-- ranking chart -->
+      <div style="background:#fff; border:1px solid #e0e4df; border-radius:3px; padding:26px 28px; margin-bottom:22px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:20px;">Weighted Ranking · out of 10</div>
+        <div style="display:flex; flex-direction:column; gap:16px;">
+
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="flex:none; width:150px; display:flex; align-items:center; gap:10px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a938f; width:16px;">1</span>
+              <span style="font-weight:600; font-size:15px;">Claude Platform</span>
+            </div>
+            <div style="flex:1; background:#f0f2ee; border-radius:2px; height:26px; overflow:hidden;">
+              <div style="height:100%; width:85.0%; background:#0e6e63;"></div>
+            </div>
+            <div style="flex:none; width:52px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:#0e6e63;">8.5</div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="flex:none; width:150px; display:flex; align-items:center; gap:10px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a938f; width:16px;">2</span>
+              <span style="font-weight:600; font-size:15px;">OpenAI Codex</span>
+            </div>
+            <div style="flex:1; background:#f0f2ee; border-radius:2px; height:26px; overflow:hidden;">
+              <div style="height:100%; width:82.5%; background:#b3bcb7;"></div>
+            </div>
+            <div style="flex:none; width:52px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:#b3bcb7;">8.3</div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="flex:none; width:150px; display:flex; align-items:center; gap:10px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a938f; width:16px;">3</span>
+              <span style="font-weight:600; font-size:15px;">Cursor</span>
+            </div>
+            <div style="flex:1; background:#f0f2ee; border-radius:2px; height:26px; overflow:hidden;">
+              <div style="height:100%; width:81.5%; background:#b3bcb7;"></div>
+            </div>
+            <div style="flex:none; width:52px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:#b3bcb7;">8.2</div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="flex:none; width:150px; display:flex; align-items:center; gap:10px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8a938f; width:16px;">4</span>
+              <span style="font-weight:600; font-size:15px;">Replit</span>
+            </div>
+            <div style="flex:1; background:#f0f2ee; border-radius:2px; height:26px; overflow:hidden;">
+              <div style="height:100%; width:71.0%; background:#b3bcb7;"></div>
+            </div>
+            <div style="flex:none; width:52px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; color:#b3bcb7;">7.1</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- table -->
+      <div style="background:#fff; border:1px solid #e0e4df; border-radius:3px; overflow:hidden;">
+        <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; min-width:820px;">
+          <thead>
+            <tr style="background:#f5f6f3;">
+              <th style="text-align:left; padding:16px 20px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#8a938f; font-weight:500; border-bottom:1px solid #e0e4df; width:26%;">Category</th>
+              <th style="text-align:left; padding:16px 18px; font-size:14px; font-weight:600; border-bottom:1px solid #e0e4df; border-left:1px solid #eef0ec;">Cursor</th>
+              <th style="text-align:left; padding:16px 18px; font-size:14px; font-weight:600; border-bottom:1px solid #e0e4df; border-left:1px solid #eef0ec;">Replit</th>
+              <th style="text-align:left; padding:16px 18px; font-size:14px; font-weight:600; border-bottom:1px solid #e0e4df; border-left:1px solid #eef0ec;">OpenAI Codex</th>
+              <th style="text-align:left; padding:16px 18px; font-size:14px; font-weight:600; border-bottom:1px solid #e0e4df; border-left:1px solid #eef0ec;">Claude Platform</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #2563eb;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Discovery &amp; Requirements</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#2563eb; margin-top:4px;">weight 15%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Strong brief decomposition via Composer; 14 prompts to clarify RTL and token constraints.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Agent inferred requirements quickly but missed two accessibility criteria until prompted.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Skills system captured project constraints in SKILL.md; thorough upfront planning pass.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Best requirements traceability; CLAUDE.md captured full brief with minimal follow-up (9 prompts).</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #7c3aed;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">UX / UI Design</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#7c3aed; margin-top:4px;">weight 15%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Faithful token application; layout polish required manual spacing adjustments.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Fastest visual prototype; live preview aided design iteration. Token drift on two components.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Solid component structure; no visual preview loop slowed design review cycles.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Consistent design-system adherence; typography scale and spacing matched supplied tokens.</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #0e6e63;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Front-End Development</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#0e6e63; margin-top:4px;">weight 25%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Excellent multi-file React/CSS edits; logical properties for RTL applied correctly across 12 files.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Full scaffold in 47 min; RTL nav required 3 manual fixes; breakpoint gaps at 768px.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Autonomous repo edits with sandbox execution; responsive grid and RTL dir attribute handled well.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Complete homepage with Arabic locale toggle; Noto Sans Arabic loaded; all breakpoints verified.</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #059669;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Code Quality</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#059669; margin-top:4px;">weight 15%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Clean component architecture; ESLint passed with zero warnings; consistent naming conventions.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">6</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Functional but monolithic; inline styles mixed with CSS modules; 4 lint warnings unresolved.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Atomic commits with descriptive messages; sandbox prevented unsafe file writes.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Methodical refactoring; TypeScript strict mode; no dead code or unused imports detected.</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #d97706;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Delivery Speed</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#d97706; margin-top:4px;">weight 10%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Completed in 3h 12m elapsed; 38 agent prompts; 2 manual interventions for env setup.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Fastest overall: 1h 52m to deployed preview; 22 prompts; zero local setup required.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">2h 41m elapsed; 31 prompts; autonomous test-and-fix loops reduced rework.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">3h 28m elapsed; 27 prompts; slower but fewer rework cycles than other platforms.</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #dc2626;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Testing &amp; QA</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#dc2626; margin-top:4px;">weight 10%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">14 unit tests for Button, Card, Nav; Vitest suite passed; no RTL-specific test cases.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">6</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">8 basic render tests generated; test runner config needed manual correction.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">16 tests written and executed autonomously; CI-compatible output; 100% pass rate on first run.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">15 tests including RTL direction toggle; snapshot tests for Arabic typography rendering.</div>
+              </td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #eef0ec;">
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #db2777;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Collaboration</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#db2777; margin-top:4px;">weight 5%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">6</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Git-native workflow only; no real-time pairing; team rules and shared configs available.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Built-in multiplayer with live cursors; strongest for cross-functional review sessions.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">5</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Terminal-first; subagents parallelize tasks but no shared review UI for non-developers.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">7</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Team/Enterprise seat management; shared MCP configs via .mcp.json in version control.</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px 20px; vertical-align:top; border-left:4px solid #4338ca;">
+                <div style="font-weight:600; font-size:15px; line-height:1.3;">Enterprise Readiness</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#4338ca; margin-top:4px;">weight 5%</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">8</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Privacy mode, SOC 2 Type II; local execution suits data-residency requirements.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">5</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Cloud-only execution; limited admin controls for government data-classification policies.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">9</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Gartner Leader 2026; RBAC, audit logging, requirements.toml admin overrides, HIPAA support.</div>
+              </td>
+              <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:16px; font-weight:500; margin-bottom:6px;">10</div>
+                <div style="font-size:12.5px; color:#55605d; line-height:1.45;">Compliance API, managed org policies, 1M-token context; Claude Code on Premium/Enterprise seats only.</div>
+              </td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr style="background:#eaf2f0; border-top:2px solid #0e6e63;">
+              <td style="padding:16px 20px; font-family:'IBM Plex Serif',serif; font-weight:600; font-size:15px;">Weighted Total</td>
+              <td style="padding:16px 18px; border-left:1px solid #d5e4e0;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; color:#0a534b;">8.2</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5a8078;"> / 10</span>
+              </td>
+              <td style="padding:16px 18px; border-left:1px solid #d5e4e0;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; color:#0a534b;">7.1</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5a8078;"> / 10</span>
+              </td>
+              <td style="padding:16px 18px; border-left:1px solid #d5e4e0;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; color:#0a534b;">8.3</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5a8078;"> / 10</span>
+              </td>
+              <td style="padding:16px 18px; border-left:1px solid #d5e4e0;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:20px; font-weight:500; color:#0a534b;">8.5</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5a8078;"> / 10</span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUATION PROCESS -->
+    <section style="padding:36px 0 56px; border-top:1px solid #e0e4df;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:14px;">04 — Evaluation Process</div>
+      <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:32px; margin:0 0 36px;">Six steps to a recommendation</h2>
+
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:0;">
+        <div style="position:relative; padding-right:14px;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">1</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Kick-off</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Evaluation charter and scope confirmed.</div>
+        </div>
+        <div style="position:relative; padding-right:14px;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">2</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Identical requirements</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Same brief issued to all platforms.</div>
+        </div>
+        <div style="position:relative; padding-right:14px;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">3</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Independent PoC runs</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Each platform builds in isolation.</div>
+        </div>
+        <div style="position:relative; padding-right:14px;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">4</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Metrics captured</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Elapsed time · prompt count · manual interventions.</div>
+        </div>
+        <div style="position:relative; padding-right:14px;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">5</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Cross-functional review</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Product · UX · Engineering · Architecture.</div>
+        </div>
+        <div style="position:relative;">
+          <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0a534b; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:14px; z-index:1;">6</span></div>
+          <div style="font-weight:600; font-size:15px; margin-bottom:6px;">Scoring &amp; recommendation</div>
+          <div style="font-size:13px; color:#8a938f; line-height:1.5;">Weighted totals resolve the decision.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE RECOMMENDATION -->
+    <section style="padding:36px 0 80px; border-top:1px solid #e0e4df;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#0e6e63; margin-bottom:14px;">05 — Executive Recommendation</div>
+      <h2 style="font-family:'IBM Plex Serif',serif; font-weight:500; font-size:32px; margin:0 0 30px;">Formal sign-off</h2>
+
+      <div style="background:#fff; border:1px solid #e0e4df; border-radius:4px; overflow:hidden;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:22px 34px; background:#17211f; color:#fff;">
+          <span style="font-family:'IBM Plex Serif',serif; font-size:20px;">Recommendation for Adoption</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; border:1px solid rgba(255,255,255,0.35); padding:5px 12px; border-radius:2px; color:#d8e2df;">Status: Complete</span>
+        </div>
+
+        <div style="padding:34px; display:grid; grid-template-columns:1fr 1fr; gap:30px 44px;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Recommended Platform</div>
+            <div style="font-family:'IBM Plex Serif',serif; font-size:22px; color:#0e6e63;">Claude Platform</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Business Justification</div>
+            <div style="font-size:15px; line-height:1.6; color:#3a4340;">Claude Platform achieved the highest weighted score (8.5/10) across all eight evaluation categories. For a government digital delivery programme requiring Arabic RTL support, design-system compliance, and enterprise-grade governance, Claude Platform's bundled Claude Code agent, Compliance API, and organisation-wide managed policies provide the strongest foundation for scaled adoption. Its 1M-token context window enabled full brief retention without fragmentation, reducing rework cycles despite a marginally longer elapsed time.</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Key Strengths</div>
+            <div style="font-size:15px; line-height:1.6; color:#3a4340;">
+              <ul style="margin:0; padding-left:18px;">
+                <li style="margin-bottom:6px;">Superior requirements traceability and enterprise readiness (10/10) with Compliance API and managed org settings</li>
+                <li style="margin-bottom:6px;">Complete RTL homepage with Arabic locale toggle, Noto Sans Arabic typography, and snapshot tests</li>
+                <li style="margin-bottom:6px;">TypeScript strict mode output with zero dead code; fewest rework cycles of all platforms tested</li>
+                <li>Mix-and-match Standard/Premium seat model allows cost control — assign Premium only to developers requiring Claude Code</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Risks &amp; Mitigations</div>
+            <div style="font-size:15px; line-height:1.6; color:#3a4340;">
+              <ul style="margin:0; padding-left:18px;">
+                <li style="margin-bottom:6px;"><strong>Premium seat licensing</strong> — Claude Code requires Team Premium seats ($100–125/seat/month), not Standard seats; budget accordingly for all developer seats</li>
+                <li style="margin-bottom:6px;"><strong>Slower initial delivery</strong> (3h 28m vs Replit's 1h 52m) — Mitigate with parallel agent workflows and pre-configured CLAUDE.md project templates</li>
+                <li style="margin-bottom:6px;"><strong>Terminal-first interface</strong> limits non-developer access — Mitigate by pairing with Claude conversational interface for Product and Design teams</li>
+                <li style="margin-bottom:6px;"><strong>Model dependency</strong> — Scores reflect current Opus/Sonnet capabilities; establish quarterly re-evaluation cadence</li>
+                <li><strong>Secondary tool need</strong> — Cursor recommended as complementary IDE for developers preferring VS Code-native workflows (scored 8.2/10)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:30px; padding-top:22px; border-top:1px solid #e0e4df; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#8a938f;">
+        <span>Government Digital Delivery — UAE</span>
+        <span>Internal Evaluation Report · Draft v1.0</span>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -10,8 +10,33 @@
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
+
+  @page { size: A4 portrait; margin: 12mm; }
+
   @media print {
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { background: #fff !important; }
+
+    /* fit the layout to the printable page width instead of the 1180px screen width */
+    body > div { min-height: 0 !important; background: #fff !important; }
+    div[style*="max-width:1180px"] { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+
+    /* stop the scorecard table from being clipped off the right edge */
+    div[style*="overflow-x:auto"] { overflow: visible !important; }
+    table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; }
+    th, td { overflow-wrap: break-word; word-break: break-word; }
+    thead { display: table-header-group; }   /* repeat header on each printed page */
+    tfoot { display: table-footer-group; }
+
+    /* keep related blocks from being split across a page break */
+    tr { break-inside: avoid; page-break-inside: avoid; }
+    section { break-inside: avoid; page-break-inside: avoid; }
+    h1, h2 { break-after: avoid; page-break-after: avoid; }
+    div[style*="repeat(6,1fr)"],
+    div[style*="repeat(2,1fr)"] { break-inside: avoid; page-break-inside: avoid; }
+
+    /* tighten oversized screen spacing so sections pack onto pages */
+    section[style*="padding:64px"] { padding-top: 24px !important; }
   }
 </style>
 </head>

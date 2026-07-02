@@ -13,6 +13,40 @@
 
   @page { size: A4 portrait; margin: 12mm; }
 
+  /* ---- Responsive (screen only) ---- */
+  @media screen {
+    /* never let the page scroll sideways; wide blocks scroll inside their own wrapper */
+    html, body { overflow-x: hidden; max-width: 100%; }
+    body > div, div[style*="max-width:1180px"] { max-width: 100%; }
+    div[style*="overflow-x:auto"] { max-width: 100%; -webkit-overflow-scrolling: touch; }
+  }
+  @media screen and (max-width: 860px) {
+    div[style*="max-width:1180px"] { padding: 0 24px !important; }
+    h1 { font-size: 42px !important; line-height: 1.12 !important; }
+    h2 { font-size: 27px !important; }
+    /* stack the multi-column grids */
+    div[style*="grid-template-columns:repeat(2,1fr)"],
+    div[style*="grid-template-columns:1.3fr 1fr"],
+    div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+    /* evaluation process: 6 steps -> 2 columns */
+    div[style*="grid-template-columns:repeat(6,1fr)"] { grid-template-columns: repeat(2,1fr) !important; row-gap: 28px !important; }
+  }
+  @media screen and (max-width: 560px) {
+    div[style*="max-width:1180px"] { padding: 0 16px !important; }
+    section[style*="padding:64px"] { padding-top: 36px !important; padding-bottom: 32px !important; }
+    h1 { font-size: 32px !important; }
+    h2 { font-size: 22px !important; }
+    /* evaluation process: 2 columns -> single column */
+    div[style*="grid-template-columns:repeat(6,1fr)"] { grid-template-columns: 1fr !important; }
+    /* weighted scoring model: stack the 8 segments into full-width bands */
+    div[style*="height:120px"] { height: auto !important; flex-direction: column !important; }
+    div[style*="height:120px"] > div { border-right: 0 !important; padding: 14px !important; }
+    /* narrow the fixed ranking labels so bars keep room */
+    div[style*="width:160px"] { width: 108px !important; }
+    /* let space-between header rows wrap instead of overflowing */
+    div[style*="justify-content:space-between"] { flex-wrap: wrap !important; gap: 10px !important; }
+  }
+
   @media print {
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     html, body { background: #fff !important; }
@@ -26,14 +60,18 @@
     table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; }
     th, td { overflow-wrap: break-word; word-break: break-word; }
     thead { display: table-header-group; }   /* repeat header on each printed page */
-    tfoot { display: table-footer-group; }
+    tfoot { display: table-row-group; }      /* show the total once, at the real end */
 
     /* keep related blocks from being split across a page break */
     tr { break-inside: avoid; page-break-inside: avoid; }
-    section { break-inside: avoid; page-break-inside: avoid; }
     h1, h2 { break-after: avoid; page-break-after: avoid; }
+    p[style*="max-width:62ch"] { break-inside: avoid; break-after: avoid; page-break-inside: avoid; page-break-after: avoid; } /* glue intro to its block, never split it */
     div[style*="repeat(6,1fr)"],
-    div[style*="repeat(2,1fr)"] { break-inside: avoid; page-break-inside: avoid; }
+    div[style*="repeat(2,1fr)"],
+    div[style*="1.3fr 1fr"],          /* PoC scope: checklist + identical inputs */
+    div[style*="padding:26px 28px"] { /* scorecard: weighted ranking chart */
+      break-inside: avoid; page-break-inside: avoid;
+    }
 
     /* tighten oversized screen spacing so sections pack onto pages */
     section[style*="padding:64px"] { padding-top: 24px !important; }

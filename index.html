@@ -181,8 +181,8 @@
             <div style="margin-top:12px; font-size:14.6px; color:#7a7260;">Usage draws from your plan's shared pool. Source: <a href="https://claude.com/pricing" style="color:#9c7a2e;">Anthropic pricing</a>, verified July 2026.</div>
           </div>
           <div>
-            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(b) Model vs harness</div>
-            <p style="margin:0; font-size:16.3px; line-height:1.6; color:#4a4534;">Scores partly reflect the underlying model, not solely the platform harness around it. Model updates may shift results independent of the product.</p>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(b) The tool vs the AI behind it</div>
+            <p style="margin:0; font-size:16.3px; line-height:1.6; color:#4a4534;">Scores partly reflect the AI model powering each tool, not just the tool itself. When the underlying AI is updated, results may change regardless of the product.</p>
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(c) PoC vs production scale</div>
@@ -190,7 +190,7 @@
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(d) Category mismatch</div>
-            <p style="margin:0; font-size:16.3px; line-height:1.6; color:#4a4534;">These tools are not the same product class — an IDE assistant, a cloud IDE, an autonomous agent, and a platform. Certain criteria structurally advantage certain tools.</p>
+            <p style="margin:0; font-size:16.3px; line-height:1.6; color:#4a4534;">These tools are not the same kind of product — a coding-editor assistant, a browser-based coding workspace, a self-directed agent, and a full platform. Some criteria naturally favour one type over another.</p>
           </div>
           <div style="grid-column:1 / -1;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:14.6px; color:#9c7a2e; margin-bottom:10px;">(e) Shared usage limits</div>
@@ -238,19 +238,19 @@
           <div style="padding:8px 22px 14px;">
             <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
               <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:14.6px;">✓</span>
-              <div><div style="font-weight:600; font-size:18px;">Responsive government homepage</div><div style="font-size:15.2px; color:#8a938f;">Desktop, tablet and mobile breakpoints</div></div>
+              <div><div style="font-weight:600; font-size:18px;">Responsive government homepage</div><div style="font-size:15.2px; color:#8a938f;">Displays correctly on desktop, tablet and mobile</div></div>
             </div>
             <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
               <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:14.6px;">✓</span>
-              <div><div style="font-weight:600; font-size:18px;">Design system compliance</div><div style="font-size:15.2px; color:#8a938f;">Adherence to supplied tokens and components</div></div>
+              <div><div style="font-weight:600; font-size:18px;">Consistent branding</div><div style="font-size:15.2px; color:#8a938f;">Follows the supplied brand styles and building blocks</div></div>
             </div>
             <div style="display:flex; align-items:center; gap:14px; padding:14px 0; border-bottom:1px solid #eef0ec;">
               <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:14.6px;">✓</span>
-              <div><div style="font-weight:600; font-size:18px;">Arabic RTL support</div><div style="font-size:15.2px; color:#8a938f;">Bidirectional layout and typography</div></div>
+              <div><div style="font-weight:600; font-size:18px;">Arabic right-to-left support</div><div style="font-size:15.2px; color:#8a938f;">Correct layout and text for Arabic reading direction</div></div>
             </div>
             <div style="display:flex; align-items:center; gap:14px; padding:14px 0;">
               <span style="flex:none; width:22px; height:22px; border:1.5px solid #0e6e63; border-radius:3px; display:flex; align-items:center; justify-content:center; color:#0e6e63; font-size:14.6px;">✓</span>
-              <div><div style="font-weight:600; font-size:18px;">Reusable component tests</div><div style="font-size:15.2px; color:#8a938f;">Unit coverage for shared UI primitives</div></div>
+              <div><div style="font-weight:600; font-size:18px;">Automated tests for shared elements</div><div style="font-size:15.2px; color:#8a938f;">Checks that reused page components keep working</div></div>
             </div>
           </div>
         </div>
@@ -392,19 +392,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Strong brief decomposition via Composer; 14 prompts to clarify RTL and token constraints.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Broke the brief into clear tasks; needed 14 rounds of back-and-forth to pin down the Arabic (right-to-left) layout and the brand style rules.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Agent inferred requirements quickly but missed two accessibility criteria until prompted.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Understood the requirements quickly but overlooked two accessibility requirements until reminded.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Skills system captured project constraints in SKILL.md; thorough upfront planning pass.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Recorded the project's rules and constraints up front and planned thoroughly before starting.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Best requirements traceability; CLAUDE.md captured full brief with minimal follow-up (9 prompts).</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Best at keeping track of every requirement; captured the full brief with the least back-and-forth (just 9 rounds).</div>
               </td>
             </tr>
 
@@ -415,19 +415,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Faithful token application; layout polish required manual spacing adjustments.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Followed the brand style rules closely; the layout needed some manual spacing tweaks to look polished.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Fastest visual prototype; live preview aided design iteration. Token drift on two components.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Fastest to produce a visual draft, and its live preview made refining the design easy. Two elements drifted slightly from the brand styles.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Solid component structure; no visual preview loop slowed design review cycles.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Well-organised design, but without a live preview, design reviews took longer.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Consistent design-system adherence; typography scale and spacing matched supplied tokens.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Consistently followed the design guidelines; fonts and spacing matched the supplied brand styles.</div>
               </td>
             </tr>
 
@@ -438,19 +438,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Excellent multi-file React/CSS edits; logical properties for RTL applied correctly across 12 files.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Excellent at editing many files at once; handled the Arabic right-to-left layout correctly across all 12 files.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Full scaffold in 47 min; RTL nav required 3 manual fixes; breakpoint gaps at 768px.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Built the full page structure in 47 minutes; the Arabic navigation needed 3 manual fixes, and the layout didn't adapt cleanly at tablet screen sizes.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Autonomous repo edits with sandbox execution; responsive grid and RTL dir attribute handled well.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Worked independently in a safe, isolated environment; handled the layout adapting to different screen sizes and the Arabic right-to-left direction well.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Complete homepage with Arabic locale toggle; Noto Sans Arabic loaded; all breakpoints verified.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Delivered a complete homepage with an Arabic/English switch and proper Arabic fonts, and confirmed it displayed correctly on all screen sizes.</div>
               </td>
             </tr>
 
@@ -461,19 +461,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Clean component architecture; ESLint passed with zero warnings; consistent naming conventions.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Clean, well-structured code that passed automated quality checks with no warnings and used consistent naming.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">6</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Functional but monolithic; inline styles mixed with CSS modules; 4 lint warnings unresolved.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Worked, but the code was bulky and mixed different styling approaches; left 4 quality-check warnings unresolved.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Atomic commits with descriptive messages; sandbox prevented unsafe file writes.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Saved its work in small, clearly labelled steps, and its isolated environment prevented any unsafe changes.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Methodical refactoring; TypeScript strict mode; no dead code or unused imports detected.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Tidied the code methodically, used the strictest safety settings, and left no leftover or unused code.</div>
               </td>
             </tr>
 
@@ -484,19 +484,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Completed in 3h 12m elapsed; 38 agent prompts; 2 manual interventions for env setup.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Finished in 3h 12m, with 38 instructions and 2 manual steps to set up the working environment.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Fastest overall: 1h 52m to deployed preview; 22 prompts; zero local setup required.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Fastest overall: a live preview in 1h 52m, with 22 instructions and no setup needed on the user's computer.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">2h 41m elapsed; 31 prompts; autonomous test-and-fix loops reduced rework.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Finished in 2h 41m with 31 instructions; automatically tested and fixed its own work, reducing rework.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">3h 28m elapsed; 27 prompts; slower but fewer rework cycles than other platforms.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Slowest at 3h 28m with 27 instructions, but needed the fewest do-overs of any platform.</div>
               </td>
             </tr>
 
@@ -507,19 +507,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">14 unit tests for Button, Card, Nav; Vitest suite passed; no RTL-specific test cases.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Wrote 14 automated checks for key page elements, all passing, but none specifically for the Arabic layout.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">6</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">8 basic render tests generated; test runner config needed manual correction.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Generated 8 basic automated checks; the testing setup needed manual correction to run.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">16 tests written and executed autonomously; CI-compatible output; 100% pass rate on first run.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Wrote and ran 16 automated checks on its own, all passing on the first try, ready for automated release pipelines.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">15 tests including RTL direction toggle; snapshot tests for Arabic typography rendering.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Wrote 15 automated checks, including ones for the Arabic layout switch and how Arabic text displays.</div>
               </td>
             </tr>
 
@@ -530,19 +530,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">6</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Git-native workflow only; no real-time pairing; team rules and shared configs available.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Works through standard version control only, with no live co-editing, though teams can share settings and rules.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Built-in multiplayer with live cursors; strongest for cross-functional review sessions.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Lets several people edit together live, seeing each other's cursors — the best for group review sessions.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">5</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Terminal-first; subagents parallelize tasks but no shared review UI for non-developers.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Command-line focused; can split work across helpers, but offers no shared screen for non-technical reviewers.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">7</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Team/Enterprise seat management; shared MCP configs via .mcp.json in version control.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Offers team and enterprise account management, and lets teams share configurations through version control.</div>
               </td>
             </tr>
 
@@ -553,19 +553,19 @@
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">8</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Privacy mode, SOC 2 Type II; local execution suits data-residency requirements.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Offers a privacy mode and recognised security certification; runs on your own machines, which suits data-location rules.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">5</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Cloud-only execution; limited admin controls for government data-classification policies.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Runs only in the cloud, with limited administrator controls for government data-handling policies.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">9</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Gartner Leader 2026; RBAC, audit logging, requirements.toml admin overrides, HIPAA support.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Recognised industry leader in 2026; offers role-based access, activity logging, admin overrides, and healthcare-grade compliance.</div>
               </td>
               <td style="padding:12px 18px; vertical-align:top; border-left:1px solid #eef0ec;">
                 <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; margin-bottom:6px;">10</div>
-                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Compliance API, managed org policies, 1M-token context; Claude Code included on all Team &amp; Enterprise seats.</div>
+                <div style="font-size:14.1px; color:#55605d; line-height:1.45;">Strong compliance tools, organisation-wide policy controls, and the ability to hold a very large amount of information in mind at once; its coding assistant is included on all Team &amp; Enterprise accounts.</div>
               </td>
             </tr>
 
@@ -620,7 +620,7 @@
         <div style="position:relative; padding-right:14px;">
           <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15.8px; z-index:1;">4</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
           <div style="font-weight:600; font-size:16.9px; margin-bottom:6px;">Metrics captured</div>
-          <div style="font-size:14.6px; color:#8a938f; line-height:1.5;">Elapsed time · prompt count · manual interventions.</div>
+          <div style="font-size:14.6px; color:#8a938f; line-height:1.5;">Time taken · number of instructions · manual steps needed.</div>
         </div>
         <div style="position:relative; padding-right:14px;">
           <div style="display:flex; align-items:center; margin-bottom:16px;"><span style="flex:none; width:34px; height:34px; border-radius:50%; background:#0e6e63; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15.8px; z-index:1;">5</span><span style="flex:1; height:2px; background:#cfe0dc;"></span></div>
@@ -653,16 +653,16 @@
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:12.4px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Business Justification</div>
-            <div style="font-size:16.9px; line-height:1.6; color:#3a4340;">Claude Platform achieved the highest weighted score (8.5/10) across all eight evaluation categories. For a government digital delivery programme requiring Arabic RTL support, design-system compliance, and enterprise-grade governance, Claude Platform's bundled Claude Code agent, Compliance API, and organisation-wide managed policies provide the strongest foundation for scaled adoption. Its 1M-token context window enabled full brief retention without fragmentation, reducing rework cycles despite a marginally longer elapsed time.</div>
+            <div style="font-size:16.9px; line-height:1.6; color:#3a4340;">Claude Platform earned the highest overall score (8.5/10) across all eight categories. For a government digital programme that needs Arabic right-to-left support, consistent branding, and strong security and governance, Claude Platform offers the strongest foundation: a built-in coding assistant, compliance and audit tools, and organisation-wide policy controls. Because it can keep the entire brief in mind at once, it made fewer mistakes and needed less rework — even though it took slightly longer to finish.</div>
           </div>
           <div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:12.4px; letter-spacing:0.14em; text-transform:uppercase; color:#8a938f; margin-bottom:10px;">Key Strengths</div>
             <div style="font-size:16.9px; line-height:1.6; color:#3a4340;">
               <ul style="margin:0; padding-left:18px;">
-                <li style="margin-bottom:6px;">Superior requirements traceability and enterprise readiness (10/10) with Compliance API and managed org settings</li>
-                <li style="margin-bottom:6px;">Complete RTL homepage with Arabic locale toggle, Noto Sans Arabic typography, and snapshot tests</li>
-                <li style="margin-bottom:6px;">TypeScript strict mode output with zero dead code; fewest rework cycles of all platforms tested</li>
-                <li>Claude Code included on every Team seat; mix Standard/Premium purely by usage need, assigning Premium (5× usage) to heavy Claude Code developers</li>
+                <li style="margin-bottom:6px;">Best at tracking every requirement, and top-rated for enterprise readiness (10/10) with strong compliance and organisation-wide controls</li>
+                <li style="margin-bottom:6px;">Delivered a complete Arabic-ready homepage with an Arabic/English switch, proper Arabic fonts, and automated checks</li>
+                <li style="margin-bottom:6px;">Produced clean, safe code with nothing left over, and needed the fewest do-overs of all platforms tested</li>
+                <li>The coding assistant is included on every Team seat; mix Standard and Premium seats purely by how much usage each person needs, giving Premium (5× the usage) to heavy users</li>
               </ul>
             </div>
           </div>
@@ -671,10 +671,10 @@
             <div style="font-size:16.9px; line-height:1.6; color:#3a4340;">
               <ul style="margin:0; padding-left:18px;">
                 <li style="margin-bottom:6px;"><strong>Usage capacity, not licensing</strong> — Claude Code is included on both Standard ($20–25/seat/mo) and Premium ($100–125/seat/mo) seats; budget Premium only where developers need the 5× usage allowance</li>
-                <li style="margin-bottom:6px;"><strong>Slower initial delivery</strong> (3h 28m vs Replit's 1h 52m) — Mitigate with parallel agent workflows and pre-configured CLAUDE.md project templates</li>
-                <li style="margin-bottom:6px;"><strong>Terminal-first interface</strong> limits non-developer access — Mitigate by pairing with Claude conversational interface for Product and Design teams</li>
-                <li style="margin-bottom:6px;"><strong>Model dependency</strong> — Scores reflect current Opus/Sonnet capabilities; establish quarterly re-evaluation cadence</li>
-                <li><strong>Secondary tool need</strong> — Cursor recommended as complementary IDE for developers preferring VS Code-native workflows (scored 8.2/10)</li>
+                <li style="margin-bottom:6px;"><strong>Slower initial delivery</strong> (3h 28m vs Replit's 1h 52m) — Reduce this by running tasks in parallel and setting up reusable project templates in advance</li>
+                <li style="margin-bottom:6px;"><strong>Command-line interface</strong> limits access for non-developers — Pair it with Claude's regular chat interface for Product and Design teams</li>
+                <li style="margin-bottom:6px;"><strong>Dependent on the AI model</strong> — Scores reflect today's models; re-evaluate every quarter as they improve</li>
+                <li><strong>May need a second tool</strong> — Cursor is recommended as a complementary code editor for developers who prefer a traditional editor (scored 8.2/10)</li>
               </ul>
             </div>
           </div>
